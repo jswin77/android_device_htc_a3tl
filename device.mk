@@ -19,6 +19,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 #PRODUCT_COPY_FILES += \
 #    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/system,system)
 
+
+# fix usb debug
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/default.prop:root/default.prop
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
